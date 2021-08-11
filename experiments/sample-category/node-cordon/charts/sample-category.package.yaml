@@ -1,0 +1,5 @@
+packageName: sample-category
+experiments:
+  - name: node-cordon
+    CSV: node-cordon.chartserviceversion.yaml
+    desc: "node-cordon"

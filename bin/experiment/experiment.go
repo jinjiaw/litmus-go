@@ -23,6 +23,7 @@ import (
 	kubeletServiceKill "github.com/litmuschaos/litmus-go/experiments/generic/kubelet-service-kill/experiment"
 	nodeCPUHog "github.com/litmuschaos/litmus-go/experiments/generic/node-cpu-hog/experiment"
 	nodeDrain "github.com/litmuschaos/litmus-go/experiments/generic/node-drain/experiment"
+	nodeCordon "github.com/litmuschaos/litmus-go/experiments/sample-category/node-cordon/experiment"
 	nodeIOStress "github.com/litmuschaos/litmus-go/experiments/generic/node-io-stress/experiment"
 	nodeMemoryHog "github.com/litmuschaos/litmus-go/experiments/generic/node-memory-hog/experiment"
 	nodeRestart "github.com/litmuschaos/litmus-go/experiments/generic/node-restart/experiment"
@@ -93,6 +94,8 @@ func main() {
 		nodeCPUHog.NodeCPUHog(clients)
 	case "node-drain":
 		nodeDrain.NodeDrain(clients)
+        case "node-cordon":
+                nodeCordon.NodeCordon(clients)
 	case "node-io-stress":
 		nodeIOStress.NodeIOStress(clients)
 	case "node-memory-hog":

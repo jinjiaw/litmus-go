@@ -1,0 +1,32 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: sample-category 
+  version: 0.1.0
+  annotations:
+    categories: sample-category
+spec:
+  displayName: sample-category chaos
+  categoryDescription: >
+    Cordon the node where application pod is scheduled 
+  experiments:
+  - node-cordon
+  keywords: 
+    - "kubernetes" 
+    - "sample-category" 
+    - "Node" 
+    - "State" 
+    - "Cordon"
+  maintainers: 
+    - name: Jinjia Wang 
+      email: jinjia.wang@ericsson.com
+  minKubeVersion: 1.12.0 
+  provider: 
+    name: Ericsson
+  links: 
+    - name: Documentation 
+      url: https://docs.litmuschaos.io/docs/getstarted/ 
+  icon:
+    - url: 
+      mediatype: ""
+  chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/sample-category/experiments.yaml
